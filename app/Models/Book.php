@@ -7,5 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Book extends Model
 {
-    use HasFactory;
+    protected $fillable =[
+        'title','description','author','publisher','date_of_issue'
+    ];
 }
