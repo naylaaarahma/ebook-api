@@ -40,7 +40,7 @@ class BookController extends Controller
             "description" => $request->description,
             "author" => $request->author,
             "publisher" => $request->publisher,
-            "date_of_issue" => $request->date_of_issue
+            "data_of_issue" => $request->data_of_issue
         ]);
 
         return response()->json([
@@ -100,7 +100,7 @@ class BookController extends Controller
             $book->description = $request->description ? $request->description : $book->description;
             $book->author = $request->author ? $request->author : $book->author;
             $book->publisher = $request->publisher ? $request->publisher : $book->publisher;
-            $book->date_of_issue = $request->date_of_issue ? $request->date_of_issue : $book->date_of_issue;
+            $book->data_of_issue = $request->data_of_issue ? $request->data_of_issue : $book->data_of_issue;
             $book->save();
             return response()->json([
                 'status' => 200,
